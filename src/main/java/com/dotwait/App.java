@@ -3,6 +3,8 @@ package com.dotwait;
 /**
  * Hello world!
  *
+ * @date 2019-08-29
+ * @author DotWait
  */
 public class App 
 {
