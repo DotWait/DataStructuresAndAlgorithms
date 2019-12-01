@@ -27,6 +27,7 @@ public class ArrayUtil {
 
     /**
      * 随机产生一个正整数
+     *
      * @return 随机正整数
      */
     private static int randomPositiveInt() {
@@ -98,10 +99,19 @@ public class ArrayUtil {
         int count = 10;
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + "\t");
-            if (i % count == 0) {
+            if ((i + 1) % count == 0) {
                 System.out.println();
             }
         }
         System.out.println("\n=======end print==========");
+    }
+
+    /**
+     * 获取一个简单的数组，用于debug
+     *
+     * @return 简单数组
+     */
+    public static int[] simpleArray() {
+        return new int[]{5, 2, 1, 6, 7, 3, 9};
     }
 }
