@@ -18,6 +18,6 @@ public static void sortAscend(int[] array) {
 
 第3行buildMaxHeap建立最大堆的时间代价为$O(n)$，maxHeapify的时间代价为$O(\lg{n})$，for循环的时间代价为$O(n\lg{n})$，堆排序的总的时间代价为$O(n)+O(n\lg{n})=O(n\lg{{n}})$。、
 
-**时间复杂度：**$O(n\lg{n]})$
+**时间复杂度：**$O(n\lg{n})$
 
 **空间复杂度：**$O(1)$
