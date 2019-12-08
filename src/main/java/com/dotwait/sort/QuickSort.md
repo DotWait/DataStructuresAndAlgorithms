@@ -1,6 +1,12 @@
 ## 快速排序分析
 
-代码如下：
+**描述：**
+
+> **快速排序**，又称**划分交换排序**，简称**快排**.在平均状况下，排序n个项目要$O(n\lg{n})$次比较。在最坏状况下则需要$O(n^2)$次比较，但这种状况并不常见。事实上，快速排序$O(n\lg{n})$通常明显比其他算法更快，因为它的内部循环可以在大部分的架构上很有效率地达成。
+>
+> ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Partition_example.svg/400px-Partition_example.svg.png)
+
+**代码如下：**
 
 ```java
 /**
@@ -70,4 +76,3 @@ private static int randomizedPartitionAscend(int[] array, int low, int high) {
    算法运行时间的递归式为：$T(n)=2T(n/2)+\Theta(n)$。因此$T(n)=\Theta(n\log{n})$。
 
 3. 平均情况：快排的平均运行时间更接近于最好情况，时间复杂度为$T(n)=\Theta(n\lg{n})$。为了引入随机性，使算法达到平均情况的性能，在划分子数组时使用随机选取划分点的方法。
-
