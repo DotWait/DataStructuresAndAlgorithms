@@ -3,6 +3,8 @@ package com.dotwait.structure;
 
 import com.dotwait.util.ArrayUtil;
 
+import static com.dotwait.util.ArrayUtil.exchange;
+
 /**
  * 优先队列
  *
@@ -101,7 +103,7 @@ public class PriorityQueue {
         }
         queue[index] = value;
         while (index > 0 && queue[index >> 1] < queue[index]) {
-            Heap.exchange(queue, index >> 1, index);
+            exchange(queue, index >> 1, index);
             index = index >> 1;
         }
     }

@@ -26,6 +26,19 @@ public class ArrayUtil {
     }
 
     /**
+     * 交换数组中的两个位置上的值
+     *
+     * @param array 数组
+     * @param i     待交换数组下标1
+     * @param j     待交换数组下标2
+     */
+    public static void exchange(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    /**
      * 随机产生一个正整数
      *
      * @return 随机正整数

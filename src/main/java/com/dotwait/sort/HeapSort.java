@@ -3,6 +3,8 @@ package com.dotwait.sort;
 import com.dotwait.enums.Ordered;
 import com.dotwait.structure.Heap;
 
+import static com.dotwait.util.ArrayUtil.exchange;
+
 /**
  * 堆排序
  * 输入：n个数的一个序列<a1, a2, ..., an>
@@ -37,7 +39,7 @@ public class HeapSort {
         int heapSize = array.length;
         Heap.buildMaxHeap(array, heapSize);
         for (int i = array.length - 1; i > 0; i--) {
-            Heap.exchange(array, 0, i);
+            exchange(array, 0, i);
             heapSize--;
             Heap.maxHeapify(array, heapSize, 0);
         }
@@ -52,7 +54,7 @@ public class HeapSort {
         int heapSize = array.length;
         Heap.buildMinHeap(array, heapSize);
         for (int i = array.length - 1; i > 0; i--) {
-            Heap.exchange(array, 0, i);
+            exchange(array, 0, i);
             heapSize--;
             Heap.minHeapify(array, heapSize, 0);
         }

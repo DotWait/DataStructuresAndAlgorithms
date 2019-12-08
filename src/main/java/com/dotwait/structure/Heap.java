@@ -1,5 +1,7 @@
 package com.dotwait.structure;
 
+import static com.dotwait.util.ArrayUtil.exchange;
+
 /**
  * 堆
  * 基本操作和性质
@@ -98,18 +100,5 @@ public class Heap {
         for (int i = (heapSize - 1) / 2; i >= 0; i--) {
             minHeapify(array, heapSize, i);
         }
-    }
-
-    /**
-     * 交换数组中的两个位置上的值
-     *
-     * @param array 数组
-     * @param i     待交换数组下标1
-     * @param j     待交换数组下标2
-     */
-    public static void exchange(int[] array, int i, int j) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
     }
 }
