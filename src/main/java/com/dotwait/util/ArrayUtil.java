@@ -44,7 +44,7 @@ public class ArrayUtil {
      * @return 随机正整数
      */
     private static int randomPositiveInt() {
-        return random.nextInt(100000);
+        return random.nextInt(10000);
     }
 
     /**
@@ -66,6 +66,20 @@ public class ArrayUtil {
         int[] array = new int[length];
         for (int i = 0; i < length; i++) {
             array[i] = randomInt();
+        }
+        return array;
+    }
+
+    /**
+     * 随机产生一个整数数组序列
+     *
+     * @param length 指定数组的长度
+     * @return 随机的整数数组序列
+     */
+    public static int[] randomPositiveSequence(int length) {
+        int[] array = new int[length];
+        for (int i = 0; i < length; i++) {
+            array[i] = randomPositiveInt();
         }
         return array;
     }
@@ -126,5 +140,24 @@ public class ArrayUtil {
      */
     public static int[] simpleArray() {
         return new int[]{5, 2, 1, 6, 7, 3, 9};
+    }
+
+    /**
+     * 获取数组中的最大数
+     *
+     * @param array 数组
+     * @return 最大数
+     */
+    public static Integer getMax(int[] array) {
+        if (array.length < 1) {
+            return null;
+        }
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
     }
 }
