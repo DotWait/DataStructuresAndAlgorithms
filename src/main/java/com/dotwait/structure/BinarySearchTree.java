@@ -309,23 +309,22 @@ public class BinarySearchTree {
      * @param node 节点
      */
     public void delete(BSTNode node){
-        BSTNode delNode = search(node.getKey());
-        if (delNode == null){
+        if (node == null){
             return;
         }
-        if (delNode.getLeftChild() == null){
-            transplant(delNode, delNode.getRightChild());
-        }else if (delNode.getRightChild() == null){
-            transplant(delNode, delNode.getLeftChild());
+        if (node.getLeftChild() == null){
+            transplant(node, node.getRightChild());
+        }else if (node.getRightChild() == null){
+            transplant(node, node.getLeftChild());
         }else {
-            BSTNode y = minimum(delNode.getRightChild());
-            if (!delNode.equals(y.getParent())){
+            BSTNode y = minimum(node.getRightChild());
+            if (!node.equals(y.getParent())){
                 transplant(y, y.getRightChild());
-                y.setRightChild(delNode.getRightChild());
+                y.setRightChild(node.getRightChild());
                 y.getRightChild().setParent(y);
             }
-            transplant(delNode, y);
-            y.setLeftChild(delNode.getLeftChild());
+            transplant(node, y);
+            y.setLeftChild(node.getLeftChild());
             y.getLeftChild().setParent(y);
         }
     }
